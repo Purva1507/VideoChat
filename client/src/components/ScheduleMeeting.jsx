@@ -59,7 +59,7 @@ export default function ScheduleMeeting({ isOpen, onClose, userEmail, userName }
         return;
       }
 
-      const response = await axios.post('http://localhost:3001/api/meetings/schedule', {
+      const response = await axios.post('https://api.artvoo.in/api/meetings/schedule', {
         title: formData.title,
         description: formData.description,
         scheduledDate: scheduledDateTime.toISOString(),

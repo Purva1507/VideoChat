@@ -53,7 +53,7 @@ npm start
 npm run dev
 ```
 
-The server will run on `http://localhost:3001`
+The server will run on `https://api.artvoo.in`
 
 2. **Start the client** (in the `client` directory)
 

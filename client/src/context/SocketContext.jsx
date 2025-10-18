@@ -3,7 +3,7 @@ import { io } from 'socket.io-client';
 
 const SocketContext = createContext(null);
 
-const SOCKET_URL = 'http://localhost:3001';
+const SOCKET_URL = 'https://api.artvoo.in';
 
 export function SocketProvider({ children }) {
   const [socket, setSocket] = useState(null);

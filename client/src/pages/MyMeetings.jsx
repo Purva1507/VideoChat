@@ -23,8 +23,8 @@ export default function MyMeetings() {
     setLoading(true);
     try {
       const endpoint = filter === 'upcoming'
-        ? `http://localhost:3001/api/meetings/user/${encodeURIComponent(user.email)}`
-        : `http://localhost:3001/api/meetings/user/${encodeURIComponent(user.email)}/all`;
+        ? `https://api.artvoo.in/api/meetings/user/${encodeURIComponent(user.email)}`
+        : `https://api.artvoo.in/api/meetings/user/${encodeURIComponent(user.email)}/all`;
 
       const response = await axios.get(endpoint);
       setMeetings(response.data.meetings);
@@ -39,7 +39,7 @@ export default function MyMeetings() {
     if (!confirm('Are you sure you want to cancel this meeting?')) return;
 
     try {
-      await axios.delete(`http://localhost:3001/api/meetings/${meetingId}`);
+      await axios.delete(`https://api.artvoo.in/api/meetings/${meetingId}`);
       fetchMeetings();
     } catch (error) {
       console.error('Error cancelling meeting:', error);

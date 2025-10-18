@@ -26,7 +26,7 @@ export function AuthProvider({ children }) {
 
   const fetchUser = async () => {
     try {
-      const response = await axios.get('http://localhost:3001/api/auth/me', {
+      const response = await axios.get('https://api.artvoo.in/api/auth/me', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setUser(response.data.user);
@@ -39,7 +39,7 @@ export function AuthProvider({ children }) {
   };
 
   const login = async (email, password) => {
-    const response = await axios.post('http://localhost:3001/api/auth/login', {
+    const response = await axios.post('https://api.artvoo.in/api/auth/login', {
       email,
       password
     });
@@ -52,7 +52,7 @@ export function AuthProvider({ children }) {
   };
 
   const register = async (name, email, password) => {
-    const response = await axios.post('http://localhost:3001/api/auth/register', {
+    const response = await axios.post('https://api.artvoo.in/api/auth/register', {
       name,
       email,
       password
